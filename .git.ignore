@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.next/
+out/
+build/
+
+# Go binaries
+main
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Environment/Secrets
+.env*
+.DS_Store

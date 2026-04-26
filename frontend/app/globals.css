@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Replace Orange with Violet/Pink Palette */
+  --color-aura-pink: #ec4899;
+  --color-aura-purple: #a855f7;
+  --color-aura-indigo: #6366f1;
+}
+
+:root { 
+  background-color: #020202; 
+  color: white; 
+}
+
+/* Updated Glassmorphic Card for the new theme */
+.energetic-card {
+  padding: 2.5rem;
+  height: 420px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #070707;
+}
+
+.energetic-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(168, 85, 247, 0.4); /* Purple border on hover */
+  box-shadow: 0 25px 50px rgba(236, 72, 153, 0.1); /* Pinkish glow */
+}
+
+/* Reusable Gradient Class */
+.aura-gradient-text {
+  background: linear-gradient(to right, #ec4899, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Page transitions */
+main {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
